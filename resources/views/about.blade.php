@@ -10,6 +10,8 @@
 
 <body>
     <h1>About</h1>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

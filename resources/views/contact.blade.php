@@ -10,6 +10,7 @@
 
 <body>
     <h1>Contact</h1>
+    <img src="img/laravel.jpg" alt="">
 </body>
 
 </html>
