@@ -1,21 +1,4 @@
 <x-layout :title="$title">
-
-    {{-- <article class="py-8 max-w-screen-md">
-        <h2 class="mb-1 text-3xl tracking-tight font-bold text-gray-900">{{ $post['title'] }}</h2>
-        <div class="text-base text-gray-500">
-            <a href="/authors/{{ $post->author->username }}" class="hover:underline">{{ $post->author->name }}</a> | 1
-            Januari 2025
-        </div>
-        <p class="my-4 font-light">{{ $post['body'] }}</p>
-        <a href="/posts" class="font-medium text-blue-500 hover:underline">&laquo; Back to all posts</a>
-    </article> --}}
-
-    <!--
-Install the "flowbite-typography" NPM package to apply styles and format the article content:
-
-URL: https://flowbite.com/docs/components/typography/
--->
-
     <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
         <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
             <article
@@ -27,9 +10,9 @@ URL: https://flowbite.com/docs/components/typography/
                             <img class="mr-4 w-16 h-16 rounded-full"
                                 src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="Jese Leos">
                             <div>
-                                <a href="/authors/{{ $post->author->username }}" rel="author"
+                                <a href="/posts?author={{ $post->author->username }}" rel="author"
                                     class="text-xl font-bold text-gray-900 dark:text-white">{{ $post->author->name }}</a>
-                                <a href="/categories/{{ $post->category->slug }}" class="block">
+                                <a href="/posts?category={{ $post->category->slug }}" class="block">
                                     <span
                                         class="{{ $post->category->color }} text-grey-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
                                         {{ $post->category->name }}
